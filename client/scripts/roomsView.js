@@ -17,14 +17,21 @@ var RoomsView = {
 
   renderRoom: function(roomname) {
     // TODO: Render out a single room.
+
+    this.$select.append(`<option value="${roomname}>${roomname}</option>`);
+    //var messages = Messages.retrieve('roomname', roomname);
   },
 
   handleChange: function(event) {
     // TODO: Handle a user selecting a different room.
+    // pressed option in list .onClick =>
+    // this.renderRoom(clickedRoom)
+
   },
 
   handleClick: function(event) {
     // TODO: Handle the user clicking the "Add Room" button.
+
   }
 
 };
