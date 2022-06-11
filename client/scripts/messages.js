@@ -15,8 +15,9 @@ var Messages = {
   },
 
   retrieve: function(messageCategory, categoryName) {
-    if (messageCategory === undefined) {
-      return _.data;
+    if (messageCategory === undefined ||
+       (messageCategory === 'roomname' && categoryName === 'Lobby')) {
+      return Messages._data;
     }
     return this._data.filter(message => message[messageCategory] === categoryName);
   }

@@ -30,6 +30,11 @@ var App = {
 
       // TODO: Use the data to update Messages and Rooms
       // and re-render the corresponding views.
+      for (var message of data) {
+        Messages.add(message);
+      }
+      MessagesView.render();
+      callback();
     });
   },
 
